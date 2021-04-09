@@ -1,4 +1,4 @@
-  *HPC Pack Burst to Azure Batch*
+  # HPC Pack Burst to Azure Batch
 
 >
 > *Purpose:* This document is intended to provide the steps needed to
