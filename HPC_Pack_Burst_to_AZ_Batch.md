@@ -61,6 +61,8 @@ subscription
 [6. Deploy Pool into the Azure Batch Subnet and Storage Mounting
 ](#deploy-pool-into-the-azure-batch-subnet-and-storage-mounting)
 
+
+
 ## Ensure network connectivity between the HPC Pack 2019 and Azure subscription
 
 *Assumption:* Azure VPN is setup and configured
@@ -80,7 +82,7 @@ Firewalls or Network Security Groups blocking:
 
 *Resources:*
 
-[Using Powershell to Test Network connections:]{.ul}
+-[Using Powershell to Test Network connections:]
 https://docs.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection?view=windowsserver2019-ps
 
 -[Azure Network Watcher]:
@@ -95,11 +97,15 @@ https://azure.microsoft.com/en-us/features/storage-explorer/
 -[HPC Pack Communication to Azure Batch]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/requirements-to-add-azure-nodes-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_ports
 
+
+
 ## Setup the Azure Batch Account and Collect Connection Information
 
 Source: for this walk through is pulled from the Microsoft source
 information located
 [here](https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps).
+
+
 
 ### Setting up the Azure Batch environment 
 
@@ -140,6 +146,8 @@ documentation this is creating an Azure AD Application registration and
 providing that registration the appropriate API access. With this
 solution we can leverage Custom IaaS images, Low Priority VMs, as well
 as deploy the Batch compute nodes into our pre-defined Subnet.
+
+
 
 ### Creating the Application Registration
 
@@ -183,14 +191,16 @@ see
 
 *Resources:*
 
-*[Creating an Azure Batch Account]{.ul}:*
+*[Creating an Azure Batch Account]:*
 https://azure.microsoft.com/documentation/articles/batch-account-create-portal/
 
-[HPC Pack Bursting to Batch]{.ul}:
+[HPC Pack Bursting to Batch]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps
 
-[Azure Batch Authentication Methods]{.ul}:
+[Azure Batch Authentication Methods]:
 https://docs.microsoft.com/en-us/azure/batch/batch-aad-auth\#use-integrated-authentication
+
+
 
 ## Create the Azure Storage account for Azure Files
 
@@ -200,6 +210,8 @@ mitigating any potential risk, it is highly recommended to set up the
 Azure Files with a Premium File Share (information regarding performance
 of Azure Files --
 [here](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-scale-targets#azure-file-share-scale-targets))
+
+
 
 ### Setting up the Azure Storage Account
 
@@ -232,14 +244,16 @@ Batch Configuration:
 
 *Resources:*
 
-[Azure File Performance]{.ul}:
+-[Azure File Performance]:
 <https://docs.microsoft.com/en-us/azure/storage/files/storage-files-scale-targets>
 
-[Optimize Azure File Configuration with SMB Multichannel]{.ul}:
+-[Optimize Azure File Configuration with SMB Multichannel]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-smb-multichannel-performance
 
-[Deploy Azure Files via the portal]{.ul}:
+-[Deploy Azure Files via the portal]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-portal
+
+
 
 ## Set the Azure Batch Configuration in HPC Pack
 
@@ -279,8 +293,10 @@ when creating the secret for the App Registration (service principal).
 
 *Resources:*
 
-[Configuring Azure AD for Batch Authentication]{.ul}:
+[Configuring Azure AD for Batch Authentication]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps\#to-configure-azure-ad-for-batch-authentication-and-obtain-batch-aad-info
+
+
 
 ## HPC Pack create a new Node Template for Azure Batch
 
@@ -319,6 +335,8 @@ https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-
 
 -[Azure Batch Automatically scale compute nodes]:
 https://docs.microsoft.com/en-us/azure/batch/batch-automatic-scaling
+
+
 
 ## Deploy Pool into the Azure Batch Subnet and Storage Mounting
 
