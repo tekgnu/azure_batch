@@ -83,16 +83,16 @@ Firewalls or Network Security Groups blocking:
 [Using Powershell to Test Network connections:]{.ul}
 https://docs.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection?view=windowsserver2019-ps
 
-[Azure Network Watcher]{.ul}:
+-[Azure Network Watcher]:
 <https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-connectivity-portal>
 
-[Azure Files Network Considerations]{.ul}:
+-[Azure Files Network Considerations]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-networking-overview
 
-[Azure Storage Explorer:]{.ul}
+-[Azure Storage Explorer:]
 https://azure.microsoft.com/en-us/features/storage-explorer/
 
-[HPC Pack Communication to Azure Batch]{.ul}:
+-[HPC Pack Communication to Azure Batch]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/requirements-to-add-azure-nodes-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_ports
 
 ## Setup the Azure Batch Account and Collect Connection Information
@@ -128,8 +128,7 @@ information:
 When setting up the Batch environment there are three options for
 configuring authentication as depicted in the graphic below:![Text
 Description automatically
-generated](media/image4.png){width="6.153437226596675in"
-height="2.286457786526684in"}
+generated](media/image4.png)
 
 Source:
 <https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps#BKMK_Account>
@@ -154,8 +153,7 @@ In Azure Active Directory -- under App Registrations, select *New
 Registration*.
 
 ![Graphical user interface, text, application Description automatically
-generated](media/image5.png){width="6.010416666666667in"
-height="2.1470548993875767in"}
+generated](media/image5.png)
 
 Next ensure that the registration has been granted, create a new Client
 Secret, and store the Client ID and Secret information. This will be
@@ -163,15 +161,13 @@ required for setting up Azure Deployment information and Azure Batch
 Configuration in HPC Pack.
 
 ![Graphical user interface, text Description automatically
-generated](media/image6.png){width="6.199645669291338in"
-height="3.7760411198600177in"}
+generated](media/image6.png)
 
 Next grant the App registration API Permissions for Azure Batch, and
 Microsoft Graph:
 
 ![Graphical user interface, text, application, email Description
-automatically generated](media/image7.png){width="6.137211286089239in"
-height="2.7395833333333335in"}
+automatically generated](media/image7.png)
 
 Source:
 <https://docs.microsoft.com/en-us/azure/batch/batch-aad-auth#use-integrated-authentication>
@@ -257,14 +253,12 @@ Configuration" options. Next add in the details that we captured
 earlier.
 
 ![Screenshot of the HPC Pack 2019 Cluster Mgr
-Configuration](media/image8.png){width="5.492832458442694in"
-height="3.71875in"}
+Configuration](media/image8.png)
 
 In the "Set Azure Batch Configuration" form set the following values:
 
 ![Image of the Azure Batch Configuration
-Form](media/image9.png){width="3.9531255468066493in"
-height="2.691053149606299in"}
+Form](media/image9.png)
 
 *Batch AAD Instance* -- this is the primary service endpoint for global
 Azure Cloud Azure Authentication (AAD). This will typically be the same
@@ -305,7 +299,7 @@ Storage Connection String*, from step 1. Leave the Account Key option
 Blank (we need to ensure that uses Azure AD).
 
 ![HPC Cluster Admin Node Template for Batch Template screen
-print](media/image10.png){width="6.5in" height="3.2402777777777776in"}
+print](media/image10.png)
 
 Next select the *Autoscale Configuration* options -- often the Default
 option meets the requirements but configuring the formula details for
@@ -313,18 +307,17 @@ Autoscale can be found
 [here](https://docs.microsoft.com/en-us/azure/batch/batch-automatic-scaling).
 
 ![Screen print from the HPC cluster admin Autoscale Configuration
-options](media/image11.png){width="5.817708880139983in"
-height="2.7820581802274718in"}
+options](media/image11.png)
 
 For the next two sections, add RDP / SSH connection information as
 required, as well as specifying a Startup Script command line as needed.
 
 *Resources:*
 
-[Create an Azure Batch Pool Template]{.ul}:
+-[Create an Azure Batch Pool Template]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_Templ
 
-[Azure Batch Automatically scale compute nodes]{.ul}:
+-[Azure Batch Automatically scale compute nodes]:
 https://docs.microsoft.com/en-us/azure/batch/batch-automatic-scaling
 
 ## Deploy Pool into the Azure Batch Subnet and Storage Mounting
@@ -337,8 +330,7 @@ document reference above are accurate, but certain details need to be
 called out.
 
 ![Azure Batch Pool Configuration
-view](media/image12.png){width="5.854983595800525in"
-height="4.469373359580053in"}
+view](media/image12.png)
 
 After selecting the *Add Azure Batch Pool*:
 
@@ -356,27 +348,25 @@ for *Publisher* "*microsoftwindowsserver*" with a *Offer* of
 
 Next set *VNet (Subnet Id)* like:
 
-> /subscriptions/{SUBSCRIPTION GUID}/resourceGroups/{RESOURCE GROUP
-> NAME}/providers/Microsoft.Network/virtualNetworks/{VNET
-> NAME}/subnets/{SUBNET NAME}
+    /subscriptions/{SUBSCRIPTION GUID}/resourceGroups
+    /{RESOURCE GROUP NAME}/providers/Microsoft.Network
+    /virtualNetworks/{VNET NAME}/subnets/{SUBNET NAME}
 
 Lastly for the *Mount Configurations* this is a json, configuration of
 the type:
 
-> { \"Type\":\"AzureFiles\",
-> \"AccountName\":\"{STORAGE_ACCOUNT_NAME\]\", \"AccountKey\":\"{STORAGE
-> SAS TOKEN} \",
-> \"AzureFileUrl\":\"https://{STORAGE_ACCOUNT_NAME}.file.core.windows.net/{SHARENAME\]\",
-> \"MountPath\":\"{MOUNTED DRIVE LETTER\]\",
-> \"MountOptions\":\"/persistent:Yes\" }
+    { \"Type\":\"AzureFiles\", \"AccountName\":\"{STORAGE_ACCOUNT_NAME\]\", 
+    \"AccountKey\":\"{STORAGE_SAS_TOKEN} \",
+    \"AzureFileUrl\":\"https://{STORAGE_ACCOUNT_NAME}.file.core.windows.net/{SHARENAME\]\", 
+    \"MountPath\":\"{MOUNTED DRIVE LETTER\]\", \"MountOptions\":\"/persistent:Yes\" }
 
 Select Next: Deploy jobs to the Azure Batch pool as normal (tip: for
 Windows add cmd /c for the task).
 
 *Resources:*
 
-[Adding the Azure Batch Pool]{.ul}:
+-[Adding the Azure Batch Pool]:
 <https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps#BKMK_Add>
 
-[Azure Batch Support VM Sizes]{.ul}:
+-[Azure Batch Support VM Sizes]:
 https://docs.microsoft.com/en-us/azure/batch/batch-pool-vm-sizes
