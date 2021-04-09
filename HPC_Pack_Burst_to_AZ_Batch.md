@@ -1,10 +1,5 @@
   *HPC Pack Burst to Azure Batch*
 
-> *Documented by*
->
-> **Matthew W. Perry** and **Eduardo Gomez**
->
-> Microsoft Cloud Solution Architects
 >
 > *Purpose:* This document is intended to provide the steps needed to
 > connect an on-premises HPC Pack implementation to burst into Azure
