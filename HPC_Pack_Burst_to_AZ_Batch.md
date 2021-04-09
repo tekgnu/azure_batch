@@ -331,7 +331,7 @@ required, as well as specifying a Startup Script command line as needed.
 *Resources:*
 
 1. [Create an Azure Batch Pool Template]:
-https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_Templ
+(https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_Templ)
 
 2. [Azure Batch Automatically scale compute nodes]:
 https://docs.microsoft.com/en-us/azure/batch/batch-automatic-scaling
