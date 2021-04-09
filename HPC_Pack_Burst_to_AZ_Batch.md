@@ -82,19 +82,19 @@ Firewalls or Network Security Groups blocking:
 
 *Resources:*
 
-1. [Using Powershell to Test Network connections:]
+1.  [Using Powershell to Test Network connections:]
 https://docs.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection?view=windowsserver2019-ps
 
-2. [Azure Network Watcher]:
+2.  [Azure Network Watcher]:
 <https://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-connectivity-portal>
 
-3. [Azure Files Network Considerations]:
+3.  [Azure Files Network Considerations]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-networking-overview
 
-4. [Azure Storage Explorer:]
+4.  [Azure Storage Explorer:]
 https://azure.microsoft.com/en-us/features/storage-explorer/
 
-5. [HPC Pack Communication to Azure Batch]:
+5.  [HPC Pack Communication to Azure Batch]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/requirements-to-add-azure-nodes-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_ports
 
 
@@ -191,13 +191,13 @@ see
 
 *Resources:*
 
-1. [Creating an Azure Batch Account]:
+1.  [Creating an Azure Batch Account]:
 https://azure.microsoft.com/documentation/articles/batch-account-create-portal/
 
-2. [HPC Pack Bursting to Batch]:
+2.  [HPC Pack Bursting to Batch]:
 https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps
 
-3. [Azure Batch Authentication Methods]:
+3.  [Azure Batch Authentication Methods]:
 https://docs.microsoft.com/en-us/azure/batch/batch-aad-auth\#use-integrated-authentication
 
 
@@ -244,13 +244,13 @@ Batch Configuration:
 
 *Resources:*
 
-1. [Azure File Performance]:
+1.  [Azure File Performance]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-scale-targets
 
-2. [Optimize Azure File Configuration with SMB Multichannel]:
+2.  [Optimize Azure File Configuration with SMB Multichannel]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-files-smb-multichannel-performance
 
-3. [Deploy Azure Files via the portal]:
+3.  [Deploy Azure Files via the portal]:
 https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-portal
 
 
@@ -330,10 +330,10 @@ required, as well as specifying a Startup Script command line as needed.
 
 *Resources:*
 
-1. [Create an Azure Batch Pool Template]:
+1.  [Create an Azure Batch Pool Template]:
 (https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps\#BKMK_Templ)
 
-2. [Azure Batch Automatically scale compute nodes]:
+2.  [Azure Batch Automatically scale compute nodes]:
 https://docs.microsoft.com/en-us/azure/batch/batch-automatic-scaling
 
 
@@ -383,8 +383,8 @@ Windows add cmd /c for the task).
 
 *Resources:*
 
-1. [Adding the Azure Batch Pool]:
+1.  [Adding the Azure Batch Pool]:
 <https://docs.microsoft.com/en-us/powershell/high-performance-computing/burst-to-azure-batch-with-microsoft-hpc-pack?view=hpc19-ps#BKMK_Add>
 
-2. [Azure Batch Support VM Sizes]:
+2.  [Azure Batch Support VM Sizes]:
 https://docs.microsoft.com/en-us/azure/batch/batch-pool-vm-sizes
