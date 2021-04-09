@@ -1,4 +1,4 @@
-HPC Pack Burst to Azure Batch
+%HPC Pack Burst to Azure Batch
 
 > *Documented by*
 >
@@ -16,7 +16,7 @@ HPC Pack Burst to Azure Batch
 # Architecture Design
 
 ![Visio Diagram depicting HPC Pack on Premise and Azure
-Batch](media/image3.png){width="6.5in" height="4.5125in"}
+Batch](media/image3.png)
 
 # Requirements
 
@@ -44,22 +44,22 @@ Batch](media/image3.png){width="6.5in" height="4.5125in"}
 
 [1. Ensure network connectivity between the HPC Pack 2019 and Azure
 subscription
-5](#ensure-network-connectivity-between-the-hpc-pack-2019-and-azure-subscription)
+](#ensure-network-connectivity-between-the-hpc-pack-2019-and-azure-subscription)
 
 [2. Setup the Azure Batch Account and Collect Connection Information
-6](#setup-the-azure-batch-account-and-collect-connection-information)
+](#setup-the-azure-batch-account-and-collect-connection-information)
 
 [3. Create the Azure Storage account for Azure Files
-10](#create-the-azure-storage-account-for-azure-files)
+](#create-the-azure-storage-account-for-azure-files)
 
 [4. Set the Azure Batch Configuration in HPC Pack
-11](#set-the-azure-batch-configuration-in-hpc-pack)
+](#set-the-azure-batch-configuration-in-hpc-pack)
 
 [5. HPC Pack create a new Node Template for Azure Batch
-13](#hpc-pack-create-a-new-node-template-for-azure-batch)
+](#hpc-pack-create-a-new-node-template-for-azure-batch)
 
 [6. Deploy Pool into the Azure Batch Subnet and Storage Mounting
-15](#deploy-pool-into-the-azure-batch-subnet-and-storage-mounting)
+](#deploy-pool-into-the-azure-batch-subnet-and-storage-mounting)
 
 ## Ensure network connectivity between the HPC Pack 2019 and Azure subscription
 
