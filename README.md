@@ -4,7 +4,7 @@ This repo is designed to enable and support the capability and usage of Azure Ba
 
 Based on some of the newer updates I wanted to address the exciting changes in Azure Batch.  The key updates center around removing the need for Public IP addresses for both the jobs and pools. I wanted to highlight leveraging both Azure Private Endpoints (for both the Batch Account and Node Management endpoints) as well as securing access.  See [here](https://learn.microsoft.com/en-us/azure/batch/private-connectivity) for more information.
 
-Like this: ![Azure Batch Architecture using Private Endpoints}(../blob/31da5796c985d2509ecfcb88f9fc9170b21a06db/media/Azure%20Batch%20Private%20Endpoint%20Design.png)
+Like this: ![Azure Batch Architecture using Private Endpoints](https://github.com/tekgnu/azure_batch/blob/31da5796c985d2509ecfcb88f9fc9170b21a06db/media/Azure%20Batch%20Private%20Endpoint%20Design.png)
 
 In order to make use of the Azure Private Endpoints, ensure that the access point is from an approved location.  So in this example I am using my Windows workstation that has access to both the Storage Account and Batch Account.
 
